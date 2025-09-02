@@ -1,0 +1,14 @@
+<launch>
+  <arg
+    name="model" />
+  <arg
+    name="gui"
+    default="True" />
+  <param
+    name="robot_description"
+    textfile="$(find mo2)/urdf/mo2.urdf" />
+  <param
+    name="use_gui"
+    value="$(arg gui)" />
+  
+</launch>

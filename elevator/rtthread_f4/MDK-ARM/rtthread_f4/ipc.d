@@ -1,0 +1,11 @@
+rtthread_f4\ipc.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/src/ipc.c
+rtthread_f4\ipc.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtthread.h
+rtthread_f4\ipc.o: ../RT-Thread/rtconfig.h
+rtthread_f4\ipc.o: F:\code\cubemx\workspace\rtthread_f4\MDK-ARM\RTE\RTE_Components.h
+rtthread_f4\ipc.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtdebug.h
+rtthread_f4\ipc.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtdef.h
+rtthread_f4\ipc.o: F:\code\keil5\keil5core\ARM\ARMCC\Bin\..\include\stdarg.h
+rtthread_f4\ipc.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtservice.h
+rtthread_f4\ipc.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtm.h
+rtthread_f4\ipc.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtthread.h
+rtthread_f4\ipc.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rthw.h

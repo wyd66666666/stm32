@@ -1,0 +1,10 @@
+rtthread_f4\system_stm32f4xx.o: ../Core/Src/system_stm32f4xx.c
+rtthread_f4\system_stm32f4xx.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+rtthread_f4\system_stm32f4xx.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
+rtthread_f4\system_stm32f4xx.o: ../Drivers/CMSIS/Include/core_cm4.h
+rtthread_f4\system_stm32f4xx.o: F:\code\keil5\keil5core\ARM\ARMCC\Bin\..\include\stdint.h
+rtthread_f4\system_stm32f4xx.o: ../Drivers/CMSIS/Include/cmsis_version.h
+rtthread_f4\system_stm32f4xx.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+rtthread_f4\system_stm32f4xx.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+rtthread_f4\system_stm32f4xx.o: ../Drivers/CMSIS/Include/mpu_armv7.h
+rtthread_f4\system_stm32f4xx.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h

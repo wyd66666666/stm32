@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"yaokongqi\startup_stm32f103xe.o"
+"yaokongqi\main.o"
+"yaokongqi\gpio.o"
+"yaokongqi\tim.o"
+"yaokongqi\usart.o"
+"yaokongqi\stm32f1xx_it.o"
+"yaokongqi\stm32f1xx_hal_msp.o"
+"yaokongqi\stm32f1xx_hal_gpio_ex.o"
+"yaokongqi\stm32f1xx_hal_tim.o"
+"yaokongqi\stm32f1xx_hal_tim_ex.o"
+"yaokongqi\stm32f1xx_hal.o"
+"yaokongqi\stm32f1xx_hal_rcc.o"
+"yaokongqi\stm32f1xx_hal_rcc_ex.o"
+"yaokongqi\stm32f1xx_hal_gpio.o"
+"yaokongqi\stm32f1xx_hal_dma.o"
+"yaokongqi\stm32f1xx_hal_cortex.o"
+"yaokongqi\stm32f1xx_hal_pwr.o"
+"yaokongqi\stm32f1xx_hal_flash.o"
+"yaokongqi\stm32f1xx_hal_flash_ex.o"
+"yaokongqi\stm32f1xx_hal_exti.o"
+"yaokongqi\stm32f1xx_hal_uart.o"
+"yaokongqi\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "YaoKongQi\YaoKongQi.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "YaoKongQi.map" -o YaoKongQi\YaoKongQi.axf

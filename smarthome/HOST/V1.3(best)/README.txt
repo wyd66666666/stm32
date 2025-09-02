@@ -1,0 +1,21 @@
+1.此版本OLED（IIC）
+2.对串口收发进行优化
+3.更改账号
+OLED
+PB6(SCL)
+PB7(SDA)
+
+PB5 LED0
+PE5 LED1
+
+DHT11
+PD11  
+
+ESP8266
+PA2(TX) PA3(RX)
+
+CC2530
+PA9(TX) PA10(RX)
+
+BUG
+可能会连不上，需要重新插拔，检查杜邦线。

@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: mo2
+    relative_path: urdf/mo2.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/mo2.srdf
+  CONFIG:
+    author_name: wyd
+    author_email: 1214918980@qq.com
+    generated_timestamp: 1605439959

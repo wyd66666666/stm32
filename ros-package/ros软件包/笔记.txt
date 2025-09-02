@@ -1,0 +1,180 @@
+#同一空间下不能出现同名功能包
+scr 代码空间
+build 编译空间
+devel 开发空间
+install 安装空间
+
+创建工作空间
+$mkdir -p ~/catkin_ws/src
+$cd ~/catkin_ws/src
+$catkin_init_workspace
+
+编译工作空间
+$cd ~/catkin_ws
+$catkin_make
+
+设置环境变量
+$source devel/setup.bash
+
+检查环境变量
+$echo $ROS_PACKAGE_PATH
+
+①创建功能包
+$cd ~/catkin_ws/src
+$catkin_create_pkg+创建文件的名字(pkg_name)+std_msgs roscpp rospy 。。。（依赖包）
+将代码放进~/catkin_ws/src/上面创建的文件名称(pkg_name)/src
+
+②msg
+$cd 创建文件的名字(pkg_name)/
+$mkdir msg
+$cd msg
+$vi 名字.msg（.msg用来存放数据类型（变量类型 变量名））
+
+编译功能包
+$cd ~/catkin_ws
+$catkin_make
+$source ~/catkin_ws/devel/setup.bash
+
+12.6
+一些基本的操作
+roscore
+rosnode list 查看节点
+rosnode info  查看节点信息
+rostopic  list 查看话题
+rostopic pub 话题 tab键  发布指令
+rosmsg show 话题  话题结构体
+rosservice list 服务列表
+rqt_graph  以图的形式显示关系
+
+12.11
+python创建发布者和订阅者连接
+https://blog.csdn.net/zong596568821xp/article/details/78088394###
+
+如何实现一个发布者
+1.初始化ros节点
+2.向ros master注册节点信息，包括发布的话题名和话题中的消息类型
+3.创建消息数据
+4.按照一定频率循环发布消息
+
+cmakelists.txt
+1.设置需要编译的代码和生成的可执行文件
+add_executable(节点的名字 scr/节点的名字.py)
+2.设置连接库
+target_link_libraries(节点的名字${catkin_LIBRARIES})
+
+编译并运行
+$cd ~/catkin_ws
+$catkin_make
+$source devel/setup.bash
+$roscore
+$ rosrun pkg_name node_name（python加.py）
+
+12.13
+https://blog.csdn.net/qq_42145185/article/details/80404096
+
+https://cloud.tencent.com/developer/article/1386928
+
+$ echo "source ~/catkin_ws/devel/setup.bash" >>  ~/.bashrc
+$ source ~/.bashrc
+
+###################################################
+rostopic list                   查看所有话题
+
+rostopic info 话题              查看话题的类型及信息
+
+rosmsg info 数据类型           查看数据结构体
+###################################################
+rosservice list                   列出所有活动的服务
+
+rosservice type  服务               查看某个服务的类型
+
+rosservice type 服务| rossrv show            查看某个服务类型具体输入什么类型的参数，返回什么类型的参数
+###################################################
+
+小海龟跟随
+sudo apt-get install ros-melodic-turtle-tf
+roslaunch turtle_tf turtle_tf_demo.launch
+rosrun turtlesim turtle_teleop_key 
+
+rosrun turtlesim turtle_teleop_key   查看tf树，会在当前目录下生成一个pdf文件
+rosrun tf tf_echo turtle1 turtle2    查看坐标等数
+rosrun rviz rviz -d 'rospack find turtle_tf'/rviz/turtle_rviz.rviz   通过rviz查看坐标  需要将fixed改为world 然后add TF
+
+/* ROS 多台电脑间进行通信 */
+一、ROS分布式多机通讯简介
+ROS是一种分布式软件框架，节点之间通过松耦合的方式组合，在很多应用场景下，节点可以运行在不同的计算平台上，通过Topic，Service通信。
+但是各个节点只能共同拥有一个Master，在多机系统中Master只能运行在一台机器上，其他机器通过ssh方式和Master取得联系。所以多机ROS系统需要进行一些配置。
+
+二、两台电脑的ROS通讯配置
+两台机器的hostname与IP假设如下：
+主机名与IP地址为：A     IP_A        
+从机名与IP地址为：B    IP_B
+1：先使用下面命令查看两台计算机的局域网IP地址
+ifconfig 
+然后打开hosts文件：
+sudo gedit /etc/hosts
+接着在hosts中加入（间隔为tab键）：
+IP_A　　A
+IP_B　　B
+2：重启网络服务：
+sudo /etc/init.d/networking restart
+3：装上chrony包，用于实现同步：
+sudo apt-get install chrony
+4：安装ssh工具
+sudo apt-get install openssh-server
+安装完以后，确认服务器是否已经启动：
+ps -e|grep ssh
+如果看到sshd那说明ssh-server已经启动了。
+5：相互ping一下对方机子，看网络通不通：
+ping A     //主机
+pnig B     //从机
+对主机与从机相同地执行上述操作，第六条略有不同
+6：把下面的内容增加到.bashrc末尾
+export ROS_HOSTNAME=[本机的hostname] #!!!注意是本机的hostname 端口号11311是固定值,照抄即可
+export ROS_MASTER_URI=http://[主机的hostname]:11311
+执行以下命令，使之有效：
+source ~/.bashrc
+
+三、注意事项
+如果在从机运行一个roslaunch,需要现在主机上运行roscore后,从机才能启动起来。
+原本一个pc上运行roslaunch的时候,会默认启动rosmaster,但是现在主机是另一个pc了,所以需要这样先把master跑起来
+尽量把最常用的pc设置为master。
+电脑A端：
+
+首先启动 ROS：
+$ roscore
+然后 Ctrl + T 打开新的控制台，运行：
+$ rosrun turtlesim turtlesim_node
+电脑B端：
+$ rosrun turtlesim turtle_teleop_key
+
+
+/*URDF机器人建模*/
+机器人描述格式
+（可以用solidworks进行建模然后转换成urdf模型具体步骤百度）
+link 连杆
+ 描述机器人某个刚体部分的外观和物理属性（尺寸 颜色 形状 惯性矩阵 碰撞参数）
+ <visual>:描述机器人link部分的外观参数
+ <inertial>:描述link的惯性参数
+ <collision>:描述link的碰撞属性
+joint 关节
+ 描述机器人关节的运动学和动力学属性（关节运动的位置和速度限制）
+ continuous 旋转关节，可以围绕单轴无限旋转
+ revolute 旋转关节，有旋转角度极限
+ prismatic 滑动关节，延某一轴线移动的关节，有位置极限
+ planar 平面关节，允许在平面正交方向上平移或旋转
+ floating 浮动关节，允许进行平移，旋转运动
+ fixed 固定关节 不能动
+ <calibration>:关节的参考位置，用来校准关节的绝对位置
+ <dynamics>:描述关节的物理属性，例如阻尼值，物体的静摩擦力，运动仿正中用到
+ <limit>:描述该关节与已有关节的关系
+ <safety_controller>:描述安全控制器参数
+
+
+cd到urdf文件夹中urdf_to_graphiz mo2.urdf 查看生成的模型是否正确
+
+URDF模型的进化版本--xacro模型文件
+ 精简模型代码
+ 提供可编程接口
+
+rosrun moveit_setup_assistant moveit_setup_assistant

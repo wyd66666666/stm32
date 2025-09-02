@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mo2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.011709 0.012906 0.006"
+        rpy="0 0 0" />
+      <mass
+        value="0.0069866" />
+      <inertia
+        ixx="4.8264E-07"
+        ixy="-4.2616E-08"
+        ixz="1.7576E-15"
+        iyy="3.9754E-07"
+        iyz="-3.7487E-14"
+        izz="7.1838E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mo2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mo2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.0020185 -0.0095126 0.0069674"
+        rpy="0 0 0" />
+      <mass
+        value="0.016584" />
+      <inertia
+        ixx="7.5842E-06"
+        ixy="4.8354E-07"
+        ixz="-2.3541E-07"
+        iyy="3.9978E-06"
+        iyz="1.1086E-06"
+        izz="1.0017E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mo2/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mo2/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="continuous">
+    <origin
+      xyz="0.0165 -0.006 0.0291"
+      rpy="0 0 1.7821" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="-6.3144E-16 0.048378 5.8844E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0096856" />
+      <inertia
+        ixx="1.4476E-05"
+        ixy="2.0928E-21"
+        ixz="4.2352E-22"
+        iyy="8.1944E-07"
+        iyz="-1.5198E-08"
+        izz="1.4476E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mo2/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mo2/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="continuous">
+    <origin
+      xyz="0 0 0.014"
+      rpy="1.5708 0.036369 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.785"
+      effort="100"
+      velocity="1" />
+  </joint>
+</robot>

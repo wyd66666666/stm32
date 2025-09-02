@@ -1,0 +1,49 @@
+..\lkzn_bldc\main.o: main.c
+..\lkzn_bldc\main.o: stm32f4xx.h
+..\lkzn_bldc\main.o: ..\CORE\core_cm4.h
+..\lkzn_bldc\main.o: F:\code\keil5\keil5core\ARM\ARMCC\Bin\..\include\stdint.h
+..\lkzn_bldc\main.o: ..\CORE\core_cmInstr.h
+..\lkzn_bldc\main.o: ..\CORE\core_cmFunc.h
+..\lkzn_bldc\main.o: ..\CORE\core_cm4_simd.h
+..\lkzn_bldc\main.o: system_stm32f4xx.h
+..\lkzn_bldc\main.o: stm32f4xx_conf.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_adc.h
+..\lkzn_bldc\main.o: ..\USER\stm32f4xx.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_crc.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_dbgmcu.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_dma.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_exti.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_flash.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_gpio.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_i2c.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_iwdg.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_pwr.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_rcc.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_rtc.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_sdio.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_spi.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_syscfg.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_tim.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_usart.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_wwdg.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\misc.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_cryp.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_hash.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_rng.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_can.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_dac.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
+..\lkzn_bldc\main.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
+..\lkzn_bldc\main.o: ..\Lkzn_Motor\GPIO_int.h
+..\lkzn_bldc\main.o: ..\Lkzn_Motor\Timer.h
+..\lkzn_bldc\main.o: ..\Lkzn_Motor\ADC_int.h
+..\lkzn_bldc\main.o: ..\Lkzn_Motor\OLED.h
+..\lkzn_bldc\main.o: ..\Lkzn_Motor\Tim1_PWM.h
+..\lkzn_bldc\main.o: ..\Lkzn_Motor\PI_Cale.h
+..\lkzn_bldc\main.o: ..\Lkzn_Motor\State_Machine.h
+..\lkzn_bldc\main.o: ..\Lkzn_Motor\PMSM motor parameters.h
+..\lkzn_bldc\main.o: ..\Lkzn_Motor\Power stage parameters.h
+..\lkzn_bldc\main.o: ..\Lkzn_Motor\Control stage parameters.h
+..\lkzn_bldc\main.o: ..\Lkzn_Motor\Drive parameters.h
+..\lkzn_bldc\main.o: ..\Lkzn_Motor\VvvfControl.h
+..\lkzn_bldc\main.o: ..\Lkzn_Motor\Hallless.h

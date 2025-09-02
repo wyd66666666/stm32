@@ -1,0 +1,12 @@
+ship_f4ve\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
+ship_f4ve\list.o: F:\code\keil5\keil5core\ARM\ARMCC\Bin\..\include\stdlib.h
+ship_f4ve\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+ship_f4ve\list.o: F:\code\keil5\keil5core\ARM\ARMCC\Bin\..\include\stddef.h
+ship_f4ve\list.o: F:\code\keil5\keil5core\ARM\ARMCC\Bin\..\include\stdint.h
+ship_f4ve\list.o: ../Core/Inc/FreeRTOSConfig.h
+ship_f4ve\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+ship_f4ve\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+ship_f4ve\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+ship_f4ve\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+ship_f4ve\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+ship_f4ve\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
